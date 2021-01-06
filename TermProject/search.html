@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./searchCss.css">
+    <title>StructureVisu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="searchJs.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="homeName">
+        <div id="title">#StructureVisu</div>
+        <div id="subtitle">visualization of Data Structure</div>
+    </div>
+    <!-- 메뉴바에 해당하는 html로 각 웹페이지 이동이 가능하도록 연결함.-->
+    <nav id="topMenu">
+        <ul id="main-menu">
+            <li><a class="menuLink" href="array.html">Array</a>
+                <ul id="sub">
+                    <li><a class="drop" href="array.html">array란?</a></li>
+                    <li><a class="drop" href="arrayVIsu.html">visualization?</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="LL.html">LinkedList</a>
+                <ul id="sub">
+                    <li><a class="drop" href="LL.html">LinkedList란?</a></li>
+                    <li><a class="drop" href="LLVIsu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="stack.html">Stack</a>
+                <ul id="sub">
+                    <li><a class="drop" href="stack.html">Stack이란?</a></li>
+                    <li><a class="drop" href="stackVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="queue.html">Queue</a>
+                <ul id="sub">
+                    <li><a class="drop" href="queue.html">Queue란?</a></li>
+                    <li><a class="drop" href="queueVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="deque.html">Deque</a>
+                <ul id="sub">
+                    <li><a class="drop" href="deque.html">Deque란?</a></li>
+                    <li><a class="drop" href="dequeVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="search.html">BlogSearch</a></li>
+        </ul>
+    </nav>
+
+    <!-- 검색어를 입력하는 input-->
+    <div id="searchDiv">
+        <input type="text" id="blogname" placeholder="Search...">
+        <button id="search"><i class="fa fa-search" style="font-size:30px;" ></i></button>
+    </div>
+    <!--검색 내용을 띄울 div-->
+    <div id="content">
+
+    </div>
+
+    <!--퀴즈를 위해 필요한 div-->
+    <div id="quizDiv"><!--퀴즈 시작을 위한 div-->
+        <div id="quizContent">
+            <p>Quiz를 시작할까요?</p>
+            <br>
+            <button id="yes">yes</button>
+            <button id="no">no</button>
+        </div>
+    </div>
+    <div id="quizDiv2"><!--퀴즈 질문에 대한 답을 입력하고 제출하는 div-->
+        <div id="quizContent2">
+            <p id="question"></p>
+            <input type="text" id="answer">
+            <button id="submit">제출</button>
+        </div>
+    </div>
+    <div id="incorrectDiv"><!--퀴즈를 맞히지 못했거나 잘못된 값을 입력하는 등 오류를 위한 div-->
+        <div id="incorrectContent">
+            <p id="warning"></p>
+            <button id="ok">확인</button>
+        </div>
+    </div>
+    <div id="correctDiv"><!--퀴즈를 맞혔을 경우 title을 바꾸기를 시작할 것인지에 대해 물어보는 div-->
+        <div id="correctContent">
+            <p>정답입니다! :D</p>
+            <p>title을 바꿔보시겠어요?</p>
+            <br>
+            <button id="y">yes</button>
+            <button id="n">no</button>
+        </div>
+    </div>
+    <div id="changeDiv">
+        <div id="changeContent"><!--title 바꾸기를 위해 한글자를 입력하거나 삭제를 위한 버튼이 포함된 div-->
+            <p>title 바꾸기는 한글자만 가능합니다!</p>
+            <p>한글자를 삭제하거나 삽입해보세요. 삭제 방법은 Queue와 Stack 2가지 입니다.</p>
+            <p>(QueuePop)➡title⬅(StackPop && push) </p>
+            <input type="text" id="inChar" maxlength="1">
+            <button id="in">push</button> <br>
+            pop :
+            <button id="stackOut">Stack</button>
+            <button id="queueOut">Queue</button>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./explain.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>StructureVisu</title>
+</head>
+
+<body>
+    <div id="homeName">
+        <div id="title">#StructureVisu</div>
+        <div id="subtitle">visualization of Data Structure</div>
+    </div>
+    <nav id="topMenu">
+        <ul id="main-menu">
+            <li><a class="menuLink" href="array.html">Array</a>
+                <ul id="sub">
+                    <li><a class="drop" href="array.html">array란?</a></li>
+                    <li><a class="drop" href="arrayVIsu.html">visualization?</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="LL.html">LinkedList</a>
+                <ul id="sub">
+                    <li><a class="drop" href="LL.html">LinkedList란?</a></li>
+                    <li><a class="drop" href="LLVIsu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="stack.html">Stack</a>
+                <ul id="sub">
+                    <li><a class="drop" href="stack.html">Stack이란?</a></li>
+                    <li><a class="drop" href="stackVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="queue.html">Queue</a>
+                <ul id="sub">
+                    <li><a class="drop" href="queue.html">Queue란?</a></li>
+                    <li><a class="drop" href="queueVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="deque.html">Deque</a>
+                <ul id="sub">
+                    <li><a class="drop" href="deque.html">Deque란?</a></li>
+                    <li><a class="drop" href="dequeVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="search.html">BlogSearch</a></li>
+        </ul>
+    </nav>
+
+    <!-- 왼쪽에 고정되어있는 서브메뉴바로 queue에 관련된 페이지 목록을 보여줌 -->
+    <ul id="subMenu">
+        <li><a id="titleMenu">Queue</a></li>
+        <li><a href="queue.html">Queue란?</a></li>
+        <li><a href="queueVisu.html">visualization</a></li>
+    </ul>
+
+    <!--queue에 대한 설명을 적는 div로 p태그와 img태그, hr, h2,h3,h4 등을 사용하여 구현-->
+    <div id="content">
+        <div>
+            <h2>Queue</h2>
+            <hr id="firstHr">
+            <br>
+            <br>
+            <h3>queue란?</h3>
+            <hr>
+            <br>
+            <p>
+                한쪽 끝(rear)에서는 삽입연산만 이루어지며 다른 한쪽 끝(front)에서는 삭제연산만 이루어지는 유한 순서 리스트이다.  
+            </p>
+            <img src="./img/queue1.png" alt="">
+            <br>
+            <p>
+                구조상 먼저 삽입된 item이 먼저 삭제가 이루어지는 First In First Out의 FIFO구조이다.
+            </p>
+            <br>
+            <br>
+            <h3>코드 예시 - java</h3>
+            <hr>
+            <br>
+            <p>
+                Queue는 LinkedList를 사용하여 구현해야하기 때문에 다음과 같이 import 후 Queue를 생성해야한다. 
+            </p>
+            <img src="./img/queue2.png" alt=""><br>
+            <img src="./img/queue3.png" alt="">
+            <br><br>
+            <p>
+                queue에 값을 넣을 때는 offer()를 사용하여 값을 넣는다. 
+            </p>
+            <img src="./img/queue5.png" alt="">
+            <br>
+            <p>
+                위와 같이 값을 넣게 되면 다음과 같이 queue에 들어가 있다고 볼 수 있다.
+            </p>
+            <img src="./img/queue6.png" alt="">
+            <br><br>
+            <p>queue에서 값을 꺼낼 때는 poll() 함수를 사용하여 꺼낼 수 있다. 위의 예제에서 다음과 같이 poll을 실행하면</p>
+            <img src="./img/queue7.png" alt="">
+            <br>
+            <p>
+                num변수에 1이 담기게 되고 queue는 1이 꺼내져 다음처럼 되어있게된다.
+            </p>
+            <img src="./img/queue8.png" alt="">
+            <br><br>
+            <p>
+                만약 값을 꺼내지 않고 확인만 하려고 한다면 peek()함수를 사용하면 된다.
+            </p>
+            <img src="./img/queue9.png" alt="">
+            <br>
+            <p>
+                그러면 top_num에는 2라는 값이 담기게 되고 peek()을 통해 2값을 가져와도 queue에는 그대로 2가 남아있다.
+            </p>            
+            <br><br>
+            <h3>Queue 구현 - java</h3>
+            <hr>
+            <br>
+            <h4>1. 배열 구현</h4>
+            <img src="./img/queue10.png" alt=""><br><br><br>
+            <img src="./img/queue11.png" alt=""><br>
+            <img src="./img/queue12.png" alt="">
+            <br><br><br>
+            <h4>2. LinkedList 구현</h4>
+            <img src="./img/queue13.png" alt=""><br><br><br>
+            <img src="./img/queue14.png" alt=""><br>
+            <img src="./img/queue15.png" alt=""><br>
+            <img src="./img/queue16.png" alt="">
+        </div>
+        <div id="utube"><!--참고 영상을 위해 유튜브에서 관련 영상을 iframe으로 가져옴-->
+            <h3>참고 영상</h3>
+            <hr>
+            <br>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/W3jNbNGyjMs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/HA8HbzuxYzs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!--퀴즈를 위해 필요한 div-->
+    <div id="quizDiv"><!--퀴즈 시작을 위한 div-->
+        <div id="quizContent">
+            <p>Quiz를 시작할까요?</p>
+            <br>
+            <button id="yes">yes</button>
+            <button id="no">no</button>
+        </div>
+    </div>
+    <div id="quizDiv2"><!--퀴즈 질문에 대한 답을 입력하고 제출하는 div-->
+        <div id="quizContent2">
+            <p id="question"></p>
+            <input type="text" id="answer">
+            <button id="submit">제출</button>
+        </div>
+    </div>
+    <div id="incorrectDiv"><!--퀴즈를 맞히지 못했거나 잘못된 값을 입력하는 등 오류를 위한 div-->
+        <div id="incorrectContent">
+            <p id="warning"></p>
+            <button id="ok">확인</button>
+        </div>
+    </div>
+    <div id="correctDiv"><!--퀴즈를 맞혔을 경우 title을 바꾸기를 시작할 것인지에 대해 물어보는 div-->
+        <div id="correctContent">
+            <p>정답입니다! :D</p>
+            <p>title을 바꿔보시겠어요?</p>
+            <br>
+            <button id="y">yes</button>
+            <button id="n">no</button>
+        </div>
+    </div>
+    <div id="changeDiv">
+        <div id="changeContent"><!--title 바꾸기를 위해 한글자를 입력하거나 삭제를 위한 버튼이 포함된 div-->
+            <p>title 바꾸기는 한글자만 가능합니다!</p>
+            <p>한글자를 삭제하거나 삽입해보세요. 삭제 방법은 Queue와 Stack 2가지 입니다.</p>
+            <p>(QueuePop)➡title⬅(StackPop && push) </p>
+            <input type="text" id="inChar" maxlength="1">
+            <button id="in">push</button> <br>
+            pop :
+            <button id="stackOut">Stack</button>
+            <button id="queueOut">Queue</button>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

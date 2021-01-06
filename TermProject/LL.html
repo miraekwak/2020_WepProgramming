@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./explain.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>StructureVisu</title>
+</head>
+
+<body>
+    <div id="homeName">
+        <div id="title">#StructureVisu</div>
+        <div id="subtitle">visualization of Data Structure</div>
+    </div>
+    <!-- 메뉴바에 해당하는 html로 각 웹페이지 이동이 가능하도록 연결함.-->
+    <nav id="topMenu">
+        <ul id="main-menu">
+            <li><a class="menuLink" href="array.html">Array</a>
+                <ul id="sub">
+                    <li><a class="drop" href="array.html">array란?</a></li>
+                    <li><a class="drop" href="arrayVIsu.html">visualization?</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="LL.html">LinkedList</a>
+                <ul id="sub">
+                    <li><a class="drop" href="LL.html">LinkedList란?</a></li>
+                    <li><a class="drop" href="LLVIsu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="stack.html">Stack</a>
+                <ul id="sub">
+                    <li><a class="drop" href="stack.html">Stack이란?</a></li>
+                    <li><a class="drop" href="stackVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="queue.html">Queue</a>
+                <ul id="sub">
+                    <li><a class="drop" href="queue.html">Queue란?</a></li>
+                    <li><a class="drop" href="queueVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="deque.html">Deque</a>
+                <ul id="sub">
+                    <li><a class="drop" href="deque.html">Deque란?</a></li>
+                    <li><a class="drop" href="dequeVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="search.html">BlogSearch</a></li>
+        </ul>
+    </nav>
+
+    <!-- 왼쪽에 고정되어있는 서브메뉴바로 linkedlist에 관련된 페이지 목록을 보여줌 -->
+    <ul id="subMenu">
+        <li><a id="titleMenu">LinkedList</a></li>
+        <li><a href="LL.html">LinkedList란?</a></li>
+        <li><a href="LLVIsu.html">visualization</a></li>
+    </ul>
+
+    <!--연결리스트에 대한 설명을 적는 div로 p태그와 img태그, hr, h2,h3,h4 등을 사용하여 구현-->
+    <div id="content">
+        <div>
+            <h2>LinkedList</h2>
+            <br>
+            <hr id="firstHr">
+            <br>
+            <br>
+            <h3>linkedlist란?</h3>
+            <hr>
+            <br>
+            <p>
+                각 노드가 데이터와 포인터를 가지고 한 줄로 연결되어 있는 방식으로 데이터를 저장하는 자료 구조이다. 이름에서 말하듯이 데이터를 담고 있는 노드들이 연결되어 있는데, 노드의 포인터가 다음이나 이전의 노드와의 연결을 담당하게 된다.
+            </p>
+            <img src="./img/llNode.png" alt="">
+            <p>
+                연결 리스트의 종류로는 단일 연결 리스트, 이중 연결 리스트 등이 있다.
+                연결 리스트는 늘어선 노드의 중간지점에서도 자료의 추가와 삭제가 O(1)의 시간에 가능하다는 장점을 갖는다. 그러나 배열이나 트리 구조와는 달리 특정 위치의 데이터를 검색해 내는데에는 O(n)의 시간이 걸리는 단점도 갖고 있다.
+            </p>
+            <br>
+            <br>
+            <h3>단일 연결 리스트</h3>
+            <hr>
+            <img src="./img/ll1.png" alt="">
+            <p>
+                다음 노드에 대한 참조만을 가진 가장 단순한 형태의 연결 리스트이다. 가장 마지막 원소를 찾으려면 얄짤없이 리스트 끝까지 찾아가야 하기 때문에(O(n)), 마지막 원소를 가리키는 참조를 따로 가지는 형태의 변형도 있다. 
+            </p>
+            <br>
+            <p>
+                이 자료구조는 Head노드를 참조하는 주소를 잃어버릴 경우 데이터 전체를 못 쓰게 되는 단점이 있다. 다음 노드를 참조하는 주소 중 하나가 잘못되는 경우에도 체인이 끊어진 양 거기부터 뒤쪽 자료들을 유실한다. 따라서 안정적인 자료구조는 아니다.
+            </p>
+            <br>
+            <br>
+            <h3>이중 연결 리스트</h3>
+            <hr>
+            <img src="./img/ll2.png" alt="">
+            <p>
+                다음 노드의 참조뿐만 아니라 이전 노드의 참조도 같이 가리키게 하면 이중 연결 리스트가 된다. 뒤로 탐색하는 게 빠르다는 단순한 장점 이외에도 한 가지 장점이 더 있는데, 단순 연결 리스트는 현재 가리키고 있는 노드를 삭제하는 게 한 번에 안 되고 O(n)이 될 수밖에 없는데 비해[4]이중 연결 리스트에서 현재 노드를 삭제하는 것은 훨씬 간단하다. 대신 관리해야 할 참조가 두 개나 있기 때문에 삽입이나 정렬의 경우 작업량이 더 많고 자료구조의 크기가 약간 더 커진다.
+            </p>
+            <p>
+                단일 연결 리스트보다는 손상에 강한 편이다. Head와 Tail노드를 갖고 있다면 둘 중 하나를 가지고 전체 리스트를 순회할 수 있기 때문에 끊어진 체인을 복구하는 게 가능하다. 단일 연결 리스트는 Tail노드로는 리스트 순회가 불가능하고 Head노드 유실시 전체 자료를 다 잃어버린다. 단점은 이런 보정 알고리즘을 구현하지 않았을 경우에는 오히려 손상에 더 취약해진다는 것이다. 예를 들어 next 포인터는 경신을 했는데 prev포인터는 경신하지 않았을 경우 prev포인터를 따라가는 순회에서 도달 불가능한 '잃어버린' 노드가 발생한다.
+            </p>
+            <br>
+            <br>
+            <h3>원형 연결 리스트</h3>
+            <hr>
+            <img src="./img/ll3.png" alt="">
+            <p>
+                단순 연결 리스트에서 마지막 원소가 널 대신 처음 원소를 가리키게 하면 원형 연결 리스트가 된다. 이와 비슷하게, 이중 연결 리스트의 처음과 끝을 서로 이으면 이중 원형 연결 리스트를 만들 수 있다.
+            </p>
+            
+        </div>
+        <div id="utube">
+            <!--참고 영상을 위해 유튜브에서 관련 영상을 iframe으로 가져옴-->
+            <h3>참고 영상</h3>
+            <hr>
+            <br>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/DzGnME1jIwY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/G4IIDyfoHeY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/x22G_r0cln4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <!--퀴즈를 위해 필요한 div-->
+    <div id="quizDiv"><!--퀴즈 시작을 위한 div-->
+        <div id="quizContent">
+            <p>Quiz를 시작할까요?</p>
+            <br>
+            <button id="yes">yes</button>
+            <button id="no">no</button>
+        </div>
+    </div>
+    <div id="quizDiv2"><!--퀴즈 질문에 대한 답을 입력하고 제출하는 div-->
+        <div id="quizContent2">
+            <p id="question"></p>
+            <input type="text" id="answer">
+            <button id="submit">제출</button>
+        </div>
+    </div>
+    <div id="incorrectDiv"><!--퀴즈를 맞히지 못했거나 잘못된 값을 입력하는 등 오류를 위한 div-->
+        <div id="incorrectContent">
+            <p id="warning"></p>
+            <button id="ok">확인</button>
+        </div>
+    </div>
+    <div id="correctDiv"><!--퀴즈를 맞혔을 경우 title을 바꾸기를 시작할 것인지에 대해 물어보는 div-->
+        <div id="correctContent">
+            <p>정답입니다! :D</p>
+            <p>title을 바꿔보시겠어요?</p>
+            <br>
+            <button id="y">yes</button>
+            <button id="n">no</button>
+        </div>
+    </div>
+    <div id="changeDiv">
+        <div id="changeContent"><!--title 바꾸기를 위해 한글자를 입력하거나 삭제를 위한 버튼이 포함된 div-->
+            <p>title 바꾸기는 한글자만 가능합니다!</p>
+            <p>한글자를 삭제하거나 삽입해보세요. 삭제 방법은 Queue와 Stack 2가지 입니다.</p>
+            <p>(QueuePop)➡title⬅(StackPop && push) </p>
+            <input type="text" id="inChar" maxlength="1">
+            <button id="in">push</button> <br>
+            pop :
+            <button id="stackOut">Stack</button>
+            <button id="queueOut">Queue</button>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

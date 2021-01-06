@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./explain.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>StructureVisu</title>
+</head>
+
+<body>
+    <div id="homeName">
+        <div id="title">#StructureVisu</div>
+        <div id="subtitle">visualization of Data Structure</div>
+    </div>
+    
+    <!-- 메뉴바에 해당하는 html로 각 웹페이지 이동이 가능하도록 연결함.-->
+    <nav id="topMenu">
+        <ul id="main-menu">
+            <li><a class="menuLink" href="array.html">Array</a>
+                <ul id="sub">
+                    <li><a class="drop" href="array.html">array란?</a></li>
+                    <li><a class="drop" href="arrayVIsu.html">visualization?</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="LL.html">LinkedList</a>
+                <ul id="sub">
+                    <li><a class="drop" href="LL.html">LinkedList란?</a></li>
+                    <li><a class="drop" href="LLVIsu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="stack.html">Stack</a>
+                <ul id="sub">
+                    <li><a class="drop" href="stack.html">Stack이란?</a></li>
+                    <li><a class="drop" href="stackVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="queue.html">Queue</a>
+                <ul id="sub">
+                    <li><a class="drop" href="queue.html">Queue란?</a></li>
+                    <li><a class="drop" href="queueVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="deque.html">Deque</a>
+                <ul id="sub">
+                    <li><a class="drop" href="deque.html">Deque란?</a></li>
+                    <li><a class="drop" href="dequeVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="search.html">BlogSearch</a></li>
+        </ul>
+    </nav>
+
+<!-- 왼쪽에 고정되어있는 서브메뉴바로 Deque에 관련된 페이지 목록을 보여줌 -->
+    <ul id="subMenu">
+        <li><a id="titleMenu">Deque</a></li>
+        <li><a href="deque.html">Deque란?</a></li>
+        <li><a href="dequeVisu.html">visualization</a></li>
+    </ul>
+    
+
+    <div id="content">
+        <div>
+            <h2>Deque</h2>
+            <hr id="fristHr">
+            <br>
+            <br>
+            <h3>deque란?</h3>
+            <hr>
+            <br>
+            <p>
+                Deque는 Double-ended queue로 Stack과 Queue를 조합한 형태의 자료구조이다. 
+            </p>
+            <p>
+                특징 
+                <ul>
+                    <li>양방향으로 데이터 삽입 및 반환 가능</li>
+                    <li>Queue 2개를 반대로 붙여서 만든 자료구조</li>
+                </ul>
+                종류
+                <ul>
+                    <li>스크롤 - 입력이 한쪽에서만 발생하고 출력은 양쪽에서 일어날 수 있는 입력 제한 데크</li>
+                    <li>셸프 - 입력은 양쪽에서 일어나고 출력은 한쪽에서만 이루어지는 출력 제한 데크</li>
+                </ul>
+            </p>
+            <br>
+            <img src="./img/deque1.png" alt="">
+            <br><br>
+            <h3>코드 예시 - java</h3>
+            <hr>
+            <br>
+            <p>
+                자바에서 Deque는 인터페이스로 구현되어있다. 덱 자료구조의 여러 연산들을 정의한 Deque 인터페이스가 있고 이를 구현한 ArrayDeque, LinkedBlockingDeque, ConcurrentLinkedDeque, LinkedList 등의 클래스가 있다.
+            </p>
+            <p>
+                Deque 인터페이스의 메소드는 다음과 같다.
+            </p>
+            <img src="./img/deque2.png" alt="">
+            <br>
+            <ul>
+                <li>addFirst : 덱의 앞쪽에 엘리먼트를 삽입한다. 용량제한에 걸리는 경우 예외가 발생한다.</li>
+                <li>offerFirst : 덱의 앞쪽에 엘리먼트를 삽입한다. 용량제한에 걸리는 경우 false를 리턴한다.</li>
+                <li>addLast : 덱의 마지막 쪽에 엘리먼트를 삽입한다. 용량제한에 걸리는 경우 예외가 발생한다.</li>
+                <li>add : addLast와 동일</li>
+                <li>offerLast : 덱의 마지막 쪽에 엘리먼트를 삽입한다. 용량제한에 걸리는 경우 false를 리턴한다.</li>
+            </ul>
+            <br>
+            <img src="./img/deque3.png" alt="">
+            <ul>
+                <li>removeFirst : 덱의 앞쪽에서 엘리먼트 하나를 제거한 다음 해당 엘리먼트를 리턴한다. 덱이 비어있으면 예외가 발생한다.</li>
+                <li>pollFirst : 덱의 앞쪽에서 엘리먼트 하나를 제거한 다음 해당 엘리먼트를 리턴한다. 덱이 비어있으면 null을 리턴한다.</li>
+                <li>removeLast : 덱의 마지막쪽에서 엘리먼트 하나를 제거한 다음 해당 엘리먼트를 리턴한다. 덱이 비어있으면 예외가 발생한다.</li>
+                <li>pollLast : 덱의 마지막쪽에서 엘리먼트 하나를 제거한 다음 해당 엘리먼트를 리턴한다. 덱이 비어있으면 null을 리턴한다.</li>
+                <li>remove : removeFirst와 동일</li>
+                <li>poll : pollFirst와 동일</li>
+            </ul>
+            <br>
+            <img src="./img/deque4.png" alt="">
+            <ul>
+                <li>getFirst : 덱의 앞쪽 엘리먼트 하나를 제거하지 않은채 리턴한다. 덱이 비어있으면 예외가 발생한다.</li>
+                <li>peekFirst : 덱의 앞쪽 엘리먼트 하나를 제거하지 않은채 리턴한다. 덱이 비어있으면 null이 리턴된다.</li>
+                <li>getLast : 덱의 마지막쪽 엘리먼트 하나를 제거하지 않은채 리턴한다. 덱이 비어있으면 예외가 발생한다.</li>
+                <li>peekLast : 덱의 마지막쪽 엘리먼트 하나를 제거하지 않은채 리턴한다. 덱이 비어있으면 null이 리턴된다.</li>
+                <li>removeFirstOccurrence(Object o) : 덱의 앞쪽에서부터 탐색하여 입력한 Object o와 동일한 첫 엘리먼트를 제거한다. Object o와 같은 엘리먼트가 없으면 덱이 변경되지 않는다.</li>
+                <li>removeLastOccurrence(Object o) : 덱의 마지막쪽에서부터 탐색하여 입력한 Object o와 동일한 첫 엘리먼트를 제거한다. Object o와 같은 엘리먼트가 없으면 덱이 변경되지 않는다.</li>
+                <li>element : removeLast와 동일</li>
+                <li>addAll(Collection &lt;? extends E&gt; c) : 입력받은 Collection의 모든 데이터를 덱의 뒤쪽에 삽입한다.</li>
+                <li>push : addFirst와 동일, 덱을 스택으로 쓸 때 사용</li>
+                <li>pop : removeFirst와 동일, 덱을 스택으로 쓸 때 사용</li>
+                <li>remove(Object o) : removeFirstOccurrence와 동일</li>
+                <li>contain(Object o) : 덱에 Object o와 동일한 엘리먼트가 포함되어 있는지 확인</li>
+                <li>size : 덱의 크기</li>
+                <li>iterator : 덱의 앞쪽부터 순차적으로 실행되는 이터레이터를 얻어옴</li>
+                <li>descendingIterator : 덱의 뒤쪽부터 순차적으로 실행되는 이터레이터를 얻어옴</li>
+            </ul>
+            <br>
+            <br>
+            <p>다음 코드 예시처럼 사용할 수 있다.</p>
+            <img src="./img/deque5.png" alt="">
+        </div>
+        <div id="utube">
+            <!--참고 영상을 위해 유튜브에서 관련 영상을 iframe으로 가져옴-->
+            <h3>참고 영상</h3>
+            <hr>
+            <br>            
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/uGr_wJKz_mE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/0mEzJ4S1d8o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+    </div>
+
+    <!--퀴즈를 위해 필요한 div-->
+    <div id="quizDiv"><!--퀴즈 시작을 위한 div-->
+        <div id="quizContent">
+            <p>Quiz를 시작할까요?</p>
+            <br>
+            <button id="yes">yes</button>
+            <button id="no">no</button>
+        </div>
+    </div>
+    <div id="quizDiv2"><!--퀴즈 질문에 대한 답을 입력하고 제출하는 div-->
+        <div id="quizContent2">
+            <p id="question"></p>
+            <input type="text" id="answer">
+            <button id="submit">제출</button>
+        </div>
+    </div>
+    <div id="incorrectDiv"><!--퀴즈를 맞히지 못했거나 잘못된 값을 입력하는 등 오류를 위한 div-->
+        <div id="incorrectContent">
+            <p id="warning"></p>
+            <button id="ok">확인</button>
+        </div>
+    </div>
+    <div id="correctDiv"><!--퀴즈를 맞혔을 경우 title을 바꾸기를 시작할 것인지에 대해 물어보는 div-->
+        <div id="correctContent">
+            <p>정답입니다! :D</p>
+            <p>title을 바꿔보시겠어요?</p>
+            <br>
+            <button id="y">yes</button>
+            <button id="n">no</button>
+        </div>
+    </div>
+    <div id="changeDiv">
+        <div id="changeContent"><!--title 바꾸기를 위해 한글자를 입력하거나 삭제를 위한 버튼이 포함된 div-->
+            <p>title 바꾸기는 한글자만 가능합니다!</p>
+            <p>한글자를 삭제하거나 삽입해보세요. 삭제 방법은 Queue와 Stack 2가지 입니다.</p>
+            <p>(QueuePop)➡title⬅(StackPop && push) </p>
+            <input type="text" id="inChar" maxlength="1">
+            <button id="in">push</button> <br>
+            pop :
+            <button id="stackOut">Stack</button>
+            <button id="queueOut">Queue</button>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

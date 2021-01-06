@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./explain.css">
+    <title>StructureVisu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="homeName">
+        <div id="title">#StructureVisu</div>
+        <div id="subtitle">visualization of Data Structure</div>
+    </div>
+    <!-- 메뉴바에 해당하는 html로 각 웹페이지 이동이 가능하도록 연결함.-->
+    <nav id="topMenu">
+        <ul id="main-menu">
+            <li><a class="menuLink" href="array.html">Array</a>
+                <ul id="sub">
+                    <li><a class="drop" href="array.html">array란?</a></li>
+                    <li><a class="drop" href="arrayVIsu.html">visualization?</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="LL.html">LinkedList</a>
+                <ul id="sub">
+                    <li><a class="drop" href="LL.html">LinkedList란?</a></li>
+                    <li><a class="drop" href="LLVIsu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="stack.html">Stack</a>
+                <ul id="sub">
+                    <li><a class="drop" href="stack.html">Stack이란?</a></li>
+                    <li><a class="drop" href="stackVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="queue.html">Queue</a>
+                <ul id="sub">
+                    <li><a class="drop" href="queue.html">Queue란?</a></li>
+                    <li><a class="drop" href="queueVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="deque.html">Deque</a>
+                <ul id="sub">
+                    <li><a class="drop" href="deque.html">Deque란?</a></li>
+                    <li><a class="drop" href="dequeVisu.html">visualization</a></li>
+                </ul>
+            </li>
+            <li><a class="menuLink" href="search.html">BlogSearch</a></li>
+        </ul>
+    </nav>
+
+<!-- 왼쪽에 고정되어있는 서브메뉴바로 stack에 관련된 페이지 목록을 보여줌 -->
+    <ul id="subMenu">
+        <li><a id="titleMenu" >Stack</a></li>
+        <li><a href="stack.html">Stack이란?</a></li>
+        <li><a href="stackVisu.html">visualization</a></li>
+    </ul>
+
+    <!--array에 대한 설명을 적는 div로 p태그와 img태그, hr, h2,h3,h4 등을 사용하여 구현-->
+    <div id="content">
+        <div>
+            <h2>Stack</h2>
+            <hr id="firstHr">
+            <br><br>
+            <h3>stack이란?</h3>
+            <hr>
+            <br>
+            <p>
+                스택(stack)이란 쌓아 올린다는 것을 의미한다. 따라서 스택 자료구조라는 것은 책을 쌓는 것처럼 차곡차곡 쌓아 올린 형태의 자료구조를 말한다.
+                스택은 위의 사진처럼 같은 구조와 크기의 자료를 정해진 방향으로만 쌓을수 있고,
+top으로 정한 곳을 통해서만 접근할 수 있다.
+top에는 가장 위에 있는 자료는 가장 최근에 들어온 자료를 가리키고 있으며,
+삽입되는 새 자료는 top이 가리키는 자료의 위에 쌓이게 된다.
+스택에서 자료를 삭제할 때도 top을 통해서만 가능하다.
+스택에서 top을 통해 삽입하는 연산을 'push' , top을 통한 삭제하는 연산을 'pop'이라고 한다.
+               
+            </p>
+            <br>
+            <img src="./img/stack1.png" alt="">
+            <br>
+            <p>
+                스택은 시간 순서에 따라 자료가 쌓여서 가장 마지막에 삽입된 자료가 가장 먼저 삭제된다는
+구조적 특징을 가지게 된다.이러한 스택의 구조를 후입선출(LIFO, Last-In-First-Out) 구조이라고 한다.
+            </p>
+            <br><br>
+            <h3>스택 활용 예시</h3>
+            <hr>
+            <p>
+                스택의 특징인  후입선출(LIFO)을 활용하여 여러 분야에서 활용 가능하다.
+                <ul>
+                    <li>웹 브라우저 방문기록 (뒤로 가기) : 가장 나중에 열린 페이지부터 다시 보여준다.</li>
+                    <li>역순 문자열 만들기 : 가장 나중에 입력된 문자부터 출력한다.</li>
+                    <li>실행 취소 (undo) : 가장 나중에 실행된 것부터 실행을 취소한다.</li>
+                    <li>후위 표기법 계산</li>
+                    <li>수식의 괄호 검사 (연산자 우선순위 표현을 위한 괄호 검사)</li>
+                </ul>
+            </p>
+            <br>
+            <br>
+            <h3>코드 예시 - java</h3>
+            <hr>
+            <br>
+            <p>
+                다음과 같이 stack을 생성할 수 있다.<br>
+                <img src="./img/stack2.png" alt=""> 
+            </p>
+            <br>
+            <p>
+                Stack클래스는 기본적으로 다음과 같은 함수를 지원한다. <br> 
+                <img src="./img/stack3.png" alt="">
+            </p>
+            <br>
+            <p>
+                다음의 예제를 통해 함수를 사용해보도록 한다. <br>
+                <img src="./img/stack4.png" alt="">
+            </p>
+            <br>
+            <p>
+                위 함수들 중 search의 동작방식을 따로 살펴보면 search는 인덱스를 반환하는 것이 아니라 순번을 반환하는 것이다.
+                즉 search의 인자 값으로 받은 값이 스택 구조에서 몇번째에 있는지를 반환하는 것이다. <br>
+                <img src="./img/stack5.png" alt="">
+            </p>
+            <br><br>
+            <h3>stack 구현 - java</h3>
+            <hr>
+            <br>
+            <h4>1. 배열 구현</h4>
+            <br>
+            <img src="./img/stack6.png" alt="">
+            <br>
+            <br>
+            <h4>2. linked list 구현</h4>
+            <br>
+            <p>
+                linkedlist로 Stack을 구현하는 것은 배열 보다 복잡하지만 linkedlist의 특성만 잘 안다면 쉽게 구현할 수 있다. 
+                linkelist로 Stack을 구현하기 위해 먼저 Node를 만들어 주어야 한다. linkedlist는 Node로 구성되어 있으며 노드는 데이터와 다음 노드를 가르키는 주소로 구성되어 있다.
+                <br>
+                <img src="./img/stack7.png" alt=""> 
+            </p>
+            <br>
+            <p>Node 클래스를 생성하고 Stack에서는 해당 Node를 사용하여 LinkedList를 구현해야한다.</p>
+            <img src="./img/stack8.png" alt=""><br>
+            <img src="./img/stack9.png" alt="">
+
+        </div>
+        <div id="utube">
+            <!--참고 영상을 위해 유튜브에서 관련 영상을 iframe으로 가져옴-->
+            <h3>참고 영상</h3>
+            <hr>
+            <br>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/5ENou-R660g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/whVUYv0Leg0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!--퀴즈를 위해 필요한 div-->
+    <div id="quizDiv"><!--퀴즈 시작을 위한 div-->
+        <div id="quizContent">
+            <p>Quiz를 시작할까요?</p>
+            <br>
+            <button id="yes">yes</button>
+            <button id="no">no</button>
+        </div>
+    </div>
+    <div id="quizDiv2"><!--퀴즈 질문에 대한 답을 입력하고 제출하는 div-->
+        <div id="quizContent2">
+            <p id="question"></p>
+            <input type="text" id="answer">
+            <button id="submit">제출</button>
+        </div>
+    </div>
+    <div id="incorrectDiv"><!--퀴즈를 맞히지 못했거나 잘못된 값을 입력하는 등 오류를 위한 div-->
+        <div id="incorrectContent">
+            <p id="warning"></p>
+            <button id="ok">확인</button>
+        </div>
+    </div>
+    <div id="correctDiv"><!--퀴즈를 맞혔을 경우 title을 바꾸기를 시작할 것인지에 대해 물어보는 div-->
+        <div id="correctContent">
+            <p>정답입니다! :D</p>
+            <p>title을 바꿔보시겠어요?</p>
+            <br>
+            <button id="y">yes</button>
+            <button id="n">no</button>
+        </div>
+    </div>
+    <div id="changeDiv">
+        <div id="changeContent"><!--title 바꾸기를 위해 한글자를 입력하거나 삭제를 위한 버튼이 포함된 div-->
+            <p>title 바꾸기는 한글자만 가능합니다!</p>
+            <p>한글자를 삭제하거나 삽입해보세요. 삭제 방법은 Queue와 Stack 2가지 입니다.</p>
+            <p>(QueuePop)➡title⬅(StackPop && push) </p>
+            <input type="text" id="inChar" maxlength="1">
+            <button id="in">push</button> <br>
+            pop :
+            <button id="stackOut">Stack</button>
+            <button id="queueOut">Queue</button>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+html{
+    /*전체 배경을 image로 줌*/
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs_fl6H3Orxw6rjhM5alqyx-Hx5Mdn7X8YpQ&usqp=CAU') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+body{
+    /*imgage를 꽉채우기 위함*/
+    min-height: 100%;
+    align-items: center;
+    font-family: 'Raleway';
+}
+#title{
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    font-weight: 800;
+    font-size: 80px;
+    color: white;
+    text-shadow: gray 5px 5px;
+}
+#subtitle{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+    color: gray;
+}
+
+/*각 메뉴를 center에 위치시키기 위한 코드*/
+#menuDiv{
+    width: 100%;
+    display: table;
+    margin-top: 5%;
+}
+#menu {
+    display: table-cell;         
+    text-align: center;
+    vertical-align: middle;
+}
+#menu ul li:first-child{
+    margin-left: 15%;
+}
+#menu ul li {
+    /*배경을 image로 주고 li태그이기 때문에 기본 스타일을 없애줌*/                      
+    list-style: none;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjd-bP0BVMDsYmTT_t2UCUhjNVxjvNjerkXw&usqp=CAU');                      
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #6e87B2; 
+    float: left;                
+    line-height: 300px;         
+    vertical-align: middle;     
+    text-align: center;
+    margin-top: 3%;
+    margin-left: 3%;
+    border-radius: 5px;
+    box-shadow: gray 5px 5px 15px;         
+}
+
+#menu .menuLink {                              
+    text-decoration:none;                      
+    color: white;                            
+    display: block;
+    font-weight: 300;                            
+    width: 200px;
+    height: 300px;                              
+    font-size: 30px;                           
+    font-weight: bold;                        
+    border-radius: 5px;
+    text-shadow: #8793b4 3px 5px;
+}
+#menu .menuLink:hover { /*마우스 오버시 배경 이미지와 color가 바뀌도록 해줌*/
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs_fl6H3Orxw6rjhM5alqyx-Hx5Mdn7X8YpQ&usqp=CAU');            
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: gray 3px 5px;
+                      
+}

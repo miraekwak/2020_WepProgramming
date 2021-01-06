@@ -1,0 +1,40 @@
+/*table을 정 가운데 배치하기 위해 dispaly table을 사용함*/
+#visuDiv{
+    display: table;
+}
+#visuContent{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding-left: 20%;
+}
+
+table, th, td{
+    border-collapse: collapse;
+    border: 2px solid gray;
+    font-family: 'Wemakeprice-Bold';
+    font-size: 20px;
+    font-weight: 500;
+}
+th, td{
+    min-width: 50px;
+    min-height: 50px;
+}
+th{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjd-bP0BVMDsYmTT_t2UCUhjNVxjvNjerkXw&usqp=CAU');                      
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+td:first-child{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjd-bP0BVMDsYmTT_t2UCUhjNVxjvNjerkXw&usqp=CAU');                      
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+#table{
+    display: none;
+    background-color: white;
+    width: 80%;
+    height: 30%;
+}

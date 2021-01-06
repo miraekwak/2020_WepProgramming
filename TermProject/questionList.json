@@ -1,0 +1,15 @@
+{"question":"배열의 시작 인덱스는?","answer":"0"}
+{"question":"배열의 인덱스 접근 시 iterator를 사용해야한다. (O/X)","answer":"X"}
+{"question":"배열 생성 시 크기를 지정하지 않아도 된다. (O/X)","answer":"X"}
+{"question":"2차원 배열 생성 시 '행'과 '열' 중 반드시 지정해야하는 크기는?","answer":"행"}
+{"question":"2차원 배열을 생성하는 방법은 type name = new type[][] 처럼 한번에 생성하는 방법 뿐이다. (O/X)","answer":"X"}
+{"question":"int arr = {1, 2, 3, 4}; 에서 2번 인덱스의 값은?","answer":"3"}
+{"question":"stack의 삽입과 삭제는 같은 곳에서 일어난다. (O/X)","answer":"O"}
+{"question":"stack은 마지막에 들어간 element가 제일 먼저 삭제되는 0000구조이다.","answer":"LIFO"}
+{"question":"stack에 push(1); push(2); push(3); peek(); 을 차례로 실행한 후 pop() 실행 시 나오는 값은?","answer":"3"}
+{"question":"array stack에 {1, 2, 3, 4}가 있고 0번 인덱스가 top이라고 하면 peek(); pop(); pop(); 실행 후 peek()시 반환되는 값은?","answer":"3"}
+{"question":"queue는 먼저 들어간 element가 먼저 삭제되는 0000구조이다.","answer":"FIFO"}
+{"question":"queue의 삽입과 삭제는 같은 곳에서 일어난다. (O/X)","answer":"X"}
+{"question":"queue를 사용하기 위해 자바 라이브러리를 이용하려고 할 때 queue 객체는 linkedlist 인스턴스로 생성해야한다. (O/X)","answer":"O"}
+{"question":"deque는 front와 rear 모두에서 삽입 삭제가 일어난다. (O/X)","answer":"O"}
+{"question":"deque는 stack과 queue의 구조를 모두 가지고 있다. (O/X)","answer":"O"}
